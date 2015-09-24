@@ -1,8 +1,8 @@
 ﻿<Application
-    x:Class="BasicApp.Tests.App"
+    x:Class="MedReminder.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:BasicApp.Tests"
+    xmlns:local="using:MedReminder"
     RequestedTheme="Light">
 
 </Application>

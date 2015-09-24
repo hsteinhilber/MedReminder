@@ -1,49 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <Package
   xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
   xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
   IgnorableNamespaces="uap mp">
 
-  <Identity
-    Name="30211d0c-df3a-4120-8bbe-ea680b5d356d"
-    Publisher="CN=harry"
-    Version="1.0.0.0" />
+  <Identity Name="3bf85341-74bb-4236-95ac-80dedc0c50ca"
+            Publisher="CN=harry"
+            Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="30211d0c-df3a-4120-8bbe-ea680b5d356d" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="3bf85341-74bb-4236-95ac-80dedc0c50ca" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>BasicApp</DisplayName>
+    <DisplayName>MedReminder.Tests</DisplayName>
     <PublisherDisplayName>harry</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
-
+  
   <Dependencies>
     <TargetDeviceFamily Name="Windows.Universal" MinVersion="10.0.0.0" MaxVersionTested="10.0.0.0" />
   </Dependencies>
 
   <Resources>
-    <Resource Language="x-generate"/>
+    <Resource Language="x-generate" />
   </Resources>
-
   <Applications>
-    <Application Id="App"
-      Executable="$targetnametoken$.exe"
-      EntryPoint="BasicApp.App">
+    <Application Id="vstest.executionengine.universal.App" 
+        Executable="$targetnametoken$.exe"
+        EntryPoint="MedReminder.Tests.App">
       <uap:VisualElements
-        DisplayName="BasicApp"
+        DisplayName="MedReminder.Tests"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="BasicApp"
+        Description="MedReminder.Tests"
         BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
     </Application>
   </Applications>
-
   <Capabilities>
     <Capability Name="internetClient" />
-  </Capabilities>
+  </Capabilities> 
 </Package>

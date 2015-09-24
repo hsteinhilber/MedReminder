@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 
-namespace BasicApp.Tests
+namespace MedReminder.Tests
 {
     [TestClass]
     public class UnitTest1

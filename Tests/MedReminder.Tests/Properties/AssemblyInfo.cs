@@ -5,13 +5,13 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("BasicApp.Tests")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("MedReminder.Tests")]
+[assembly: AssemblyDescription("Unit test assembly")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("BasicApp.Tests")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCompany("Random Code Patterns")]
+[assembly: AssemblyProduct("MedReminder.Tests")]
+[assembly: AssemblyCopyright("Copyright ©2015 Harry Steinhilber")]
+[assembly: AssemblyTrademark("All rights reserved")]
 [assembly: AssemblyCulture("")]
 [assembly: AssemblyMetadata("TargetPlatform","UAP")]
 
@@ -26,5 +26,5 @@ using System.Runtime.InteropServices;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("0.1.0.0")]
 [assembly: ComVisible(false)]

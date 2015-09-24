@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicApp", "Source\BasicApp\BasicApp.csproj", "{8E91A254-6181-42D7-9E5B-05E069CE53AF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedReminder", "Source\MedReminder\MedReminder.csproj", "{8E91A254-6181-42D7-9E5B-05E069CE53AF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{35DABE37-9DCF-4C35-AF30-1C52F4477102}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{EF214884-7EB9-4DEE-847D-240F5CFDA01B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicApp.Tests", "Tests\BasicApp.Tests\BasicApp.Tests.csproj", "{FDDDD505-6429-4C32-AE60-50C0F6A88B0B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedReminder.Tests", "Tests\MedReminder.Tests\MedReminder.Tests.csproj", "{FDDDD505-6429-4C32-AE60-50C0F6A88B0B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
