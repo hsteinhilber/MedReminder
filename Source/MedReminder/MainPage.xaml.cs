@@ -26,5 +26,10 @@ namespace MedReminder
         {
             this.InitializeComponent();
         }
+
+        private void HamburgerButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainMenu.IsPaneOpen = !MainMenu.IsPaneOpen;
+        }
     }
 }
