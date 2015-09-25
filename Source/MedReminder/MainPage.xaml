@@ -35,21 +35,23 @@
         </SplitView.Pane>
         <SplitView.Content>
             <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-                <StackPanel>
-                   
-                    <TextBlock FontFamily="Segoe" FontSize="24" Padding="6" FontWeight="Bold" Height="50" VerticalAlignment="Center">
-                        Harry's Medications
-                    </TextBlock>
-                    <TextBlock Padding="6">
+                <StackPanel Margin="10,0,0,0">
+                    <Border BorderBrush="{x:Null}" Height="50">
+                        <TextBlock Text="Harry's Medictation" FontSize="24" FontWeight="Bold" VerticalAlignment="Center" />
+                    </Border>
+                    <TextBlock>
                         This is where the main body will go...
                     </TextBlock>
-                    <CommandBar x:Name="MainAppBar">
-                        <AppBarButton x:Name="DeleteMedication" FontFamily="Segoe MDL2 Assets" Content="&#xE107;"
-                                      Width="50" Height="50" Background="Transparent" />
-                    </CommandBar>
                 </StackPanel>
             </Grid>
         </SplitView.Content>
     </SplitView>
+    <Page.BottomAppBar>
+        <CommandBar x:Name="MainCommandBar" >
+            <AppBarButton x:Name="AddMedication" Icon="Add" Label="Add" ToolTipService.ToolTip="Add a medication" />
+            <AppBarButton x:Name="DeleteMedication" Icon="Delete" Label="Delete" ToolTipService.ToolTip="Delete selected medication(s)" IsEnabled="False" />
+            <AppBarButton x:Name="SelectMedications" Icon="AllApps" Label="Select" ToolTipService.ToolTip="Select medications" />
+        </CommandBar>
+    </Page.BottomAppBar>
 </Page>
     
