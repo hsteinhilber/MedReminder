@@ -31,5 +31,20 @@ namespace MedReminder
         {
             MainMenu.IsPaneOpen = !MainMenu.IsPaneOpen;
         }
+
+        private void SettingsButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void AddProfileButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DefaultProfileButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
