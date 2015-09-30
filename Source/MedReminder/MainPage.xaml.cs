@@ -25,6 +25,10 @@ namespace MedReminder
         public MainPage()
         {
             this.InitializeComponent();
+            this.MedicationList.Items.Add(new ViewModels.MedicineViewModel() { Name = "Tylenol", Dose = "200 mg", Frequency = "as needed", DoseVisibility = Visibility.Collapsed });
+            this.MedicationList.Items.Add(new ViewModels.MedicineViewModel() { Name="Amoxicillan", Dose="100 mg", Frequency="3 times per day", DoseVisibility=Visibility.Visible, NextDose="at 2:00 pm" });
+            this.MedicationList.Items.Add(new ViewModels.MedicineViewModel() { Name="Fluoxitine", Dose="40 mg", Frequency="1 time per day", DoseVisibility=Visibility.Visible, NextDose="tomorrow at 8:00 am" });
+            this.MedicationList.Items.Add(new ViewModels.MedicineViewModel() { Name="Asprin", Dose="85 mg", Frequency="with a food just before bed", DoseVisibility=Visibility.Visible, NextDose="at 7:00 pm" });
         }
 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
