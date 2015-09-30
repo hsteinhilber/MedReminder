@@ -4,10 +4,16 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:MedReminder"
     xmlns:vm="using:MedReminder.ViewModels"
+    xmlns:design="using:MedReminder.ViewModels.Design"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
+    <d:Page.DataContext>
+        <design:DesignerMedicationListViewModel/>
+    </d:Page.DataContext>
+    <Page.DataContext>
+        <design:DesignerMedicationListViewModel/>
+    </Page.DataContext>
     <SplitView x:Name="MainMenu" DisplayMode="CompactOverlay" IsPaneOpen="False"
                CompactPaneLength="50" OpenPaneLength="200">
         <SplitView.Pane>
@@ -39,18 +45,18 @@
                     <Border BorderBrush="{x:Null}" Height="50">
                         <TextBlock Text="Harry's Medictation" FontSize="24" FontWeight="Bold" VerticalAlignment="Center" />
                     </Border>
-                    <ListView x:Name="MedicationList" SelectionMode="None">
+                    <ListView x:Name="MedicationList" SelectionMode="None" ItemsSource="{Binding Medications}">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Vertical" Margin="0,0,0,15">
                                     <TextBlock FontSize="20" Text="{Binding Name}" />
                                     <StackPanel Margin="15,0,0,0" Orientation="Horizontal">
                                         <TextBlock FontSize="12" Text="{Binding Dose}" />
-                                        <TextBlock FontSize="12" Text=", " />
+                                        <TextBlock FontSize="12" Text="," Padding="0,0,4,0"  />
                                         <TextBlock FontSize="12" Text="{Binding Frequency}" />
                                     </StackPanel>
                                     <StackPanel Margin="15,0,0,0" Orientation="Horizontal" Visibility="{Binding DoseVisibility}">
-                                        <TextBlock FontSize="12" Text="Next dose is " />
+                                        <TextBlock FontSize="12" Text="Next dose is" Padding="0,0,4,0" />
                                         <TextBlock FontSize="12" Text="{Binding NextDose}" />
                                     </StackPanel>
                                 </StackPanel>
