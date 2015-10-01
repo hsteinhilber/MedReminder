@@ -8,6 +8,7 @@ namespace MedReminder.ViewModels
 {
     public interface IMedicationListViewModel
     {
+        string ProfileName { get; }
         IList<IMedication> Medications { get; }
     }
 }

@@ -11,6 +11,8 @@ namespace MedReminder.ViewModels.Design
     {
         private List<IMedication> _medications;
 
+        public string ProfileName { get { return "Default Profile"; } }
+
         public IList<IMedication> Medications
         {
             get

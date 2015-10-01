@@ -42,9 +42,10 @@
         <SplitView.Content>
             <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
                 <StackPanel Margin="10,0,0,0">
-                    <Border BorderBrush="{x:Null}" Height="50">
-                        <TextBlock Text="Harry's Medictation" FontSize="24" FontWeight="Bold" VerticalAlignment="Center" />
-                    </Border>
+                    <StackPanel Orientation="Horizontal" Height="50">
+                        <TextBlock Text="{Binding ProfileName}" FontSize="24" FontWeight="Bold" VerticalAlignment="Center" />
+                        <TextBlock Text="'s Medictation" FontSize="24" FontWeight="Bold" VerticalAlignment="Center" />
+                    </StackPanel>
                     <ListView x:Name="MedicationList" SelectionMode="None" ItemsSource="{Binding Medications}">
                         <ListView.ItemTemplate>
                             <DataTemplate>
