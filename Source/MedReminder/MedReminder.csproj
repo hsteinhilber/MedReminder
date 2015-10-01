@@ -106,8 +106,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
+    <Compile Include="MedicationListPage.xaml.cs">
+      <DependentUpon>MedicationListPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\IMedication.cs" />
@@ -136,7 +136,7 @@
     <Compile Include="ViewModels\Design\DesignerMedicationListViewModel.cs">
       <Generator>MSBuild:Compile</Generator>
     </Compile>
-    <Page Include="MainPage.xaml">
+    <Page Include="MedicationListPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
