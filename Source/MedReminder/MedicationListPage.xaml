@@ -41,30 +41,55 @@
         </SplitView.Pane>
         <SplitView.Content>
             <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-                <StackPanel Margin="10,0,0,0">
-                    <StackPanel Orientation="Horizontal" Height="50">
-                        <TextBlock Text="{Binding ProfileName}" FontSize="24" FontWeight="Bold" VerticalAlignment="Center" />
-                        <TextBlock Text="'s Medictation" FontSize="24" FontWeight="Bold" VerticalAlignment="Center" />
-                    </StackPanel>
-                    <ListView x:Name="MedicationList" SelectionMode="None" ItemsSource="{Binding Medications}">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <StackPanel Orientation="Vertical" Margin="0,0,0,15">
-                                    <TextBlock FontSize="20" Text="{Binding Name}" />
-                                    <StackPanel Margin="15,0,0,0" Orientation="Horizontal">
-                                        <TextBlock FontSize="12" Text="{Binding Dose}" />
-                                        <TextBlock FontSize="12" Text="," Padding="0,0,4,0"  />
-                                        <TextBlock FontSize="12" Text="{Binding Frequency}" />
-                                    </StackPanel>
-                                    <StackPanel Margin="15,0,0,0" Orientation="Horizontal" Visibility="{Binding DoseVisibility}">
-                                        <TextBlock FontSize="12" Text="Next dose is" Padding="0,0,4,0" />
-                                        <TextBlock FontSize="12" Text="{Binding NextDose}" />
-                                    </StackPanel>
-                                </StackPanel>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="15" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <StackPanel Orientation="Horizontal" Height="50" Grid.Row="0" Grid.Column="1">
+                    <TextBlock Text="{Binding ProfileName}" FontSize="24" VerticalAlignment="Center" />
+                    <TextBlock Text="'s Medictation" FontSize="24" VerticalAlignment="Center" />
                 </StackPanel>
+                <ListView x:Name="MedicationList" SelectionMode="None" ItemsSource="{Binding Medications}" 
+                          Grid.Row="1" Grid.Column="1">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <FlipView MaxHeight="100" Background="Transparent">
+                                <FlipViewItem>
+                                    <StackPanel HorizontalAlignment="Stretch" Margin="0,5,0,5">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock FontSize="20" Text="{Binding Name}" />
+                                            <TextBlock FontSize="20" Text="(" Padding="4,0,0,0" />
+                                            <TextBlock FontSize="20" Text="{Binding Dose}" />
+                                            <TextBlock FontSize="20" Text=")" />
+                                        </StackPanel>
+                                        <TextBlock FontSize="16" Text="{Binding Frequency}" Margin="15,0,0,0"
+                                                   TextWrapping="WrapWholeWords" MaxLines="3" />
+                                        <StackPanel Margin="15,0,0,0" Orientation="Horizontal" Visibility="{Binding DoseVisibility}">
+                                            <TextBlock FontSize="16" Text="Next dose is" Padding="0,0,4,0" />
+                                            <TextBlock FontSize="16" Text="{Binding NextDose}" />
+                                        </StackPanel>
+                                    </StackPanel>
+                                </FlipViewItem>
+                                <FlipViewItem>
+                                    <StackPanel HorizontalAlignment="Right"  Orientation="Horizontal">
+                                        <Button Height="50" Width="50" FontSize="24" Background="Transparent" 
+                                                FontFamily="Segoe MDL2 Assets" Content="&#xE8FB;" />
+                                        <Button Height="50" Width="50" FontSize="24" Background="Transparent" 
+                                                FontFamily="Segoe MDL2 Assets" Content="&#xE101;" />
+                                        <Button Height="50" Width="50" FontSize="24" Background="Transparent"
+                                                FontFamily="Segoe MDL2 Assets" Content="&#xE104;" />
+                                        <Button Height="50" Width="50" FontSize="24"  Background="Transparent" 
+                                                FontFamily="Segoe MDL2 Assets" Content="&#xE107;" />
+                                    </StackPanel>
+                                </FlipViewItem>
+                            </FlipView>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </Grid>
         </SplitView.Content>
     </SplitView>
