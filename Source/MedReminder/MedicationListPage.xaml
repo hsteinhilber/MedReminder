@@ -48,6 +48,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="15" />
                     <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="15" />
                 </Grid.ColumnDefinitions>
                 <StackPanel Orientation="Horizontal" Height="50" Grid.Row="0" Grid.Column="1">
                     <TextBlock Text="{Binding ProfileName}" FontSize="24" VerticalAlignment="Center" />
@@ -58,7 +59,7 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <FlipView MaxHeight="100" Background="Transparent">
-                                <FlipViewItem>
+                                <FlipViewItem  VerticalContentAlignment="Center">
                                     <StackPanel HorizontalAlignment="Stretch" Margin="0,5,0,5">
                                         <StackPanel Orientation="Horizontal">
                                             <TextBlock FontSize="20" Text="{Binding Name}" />
@@ -74,16 +75,28 @@
                                         </StackPanel>
                                     </StackPanel>
                                 </FlipViewItem>
-                                <FlipViewItem>
-                                    <StackPanel HorizontalAlignment="Right"  Orientation="Horizontal">
-                                        <Button Height="50" Width="50" FontSize="24" Background="Transparent" 
-                                                FontFamily="Segoe MDL2 Assets" Content="&#xE8FB;" />
-                                        <Button Height="50" Width="50" FontSize="24" Background="Transparent" 
-                                                FontFamily="Segoe MDL2 Assets" Content="&#xE101;" />
-                                        <Button Height="50" Width="50" FontSize="24" Background="Transparent"
-                                                FontFamily="Segoe MDL2 Assets" Content="&#xE104;" />
-                                        <Button Height="50" Width="50" FontSize="24"  Background="Transparent" 
-                                                FontFamily="Segoe MDL2 Assets" Content="&#xE107;" />
+                                <FlipViewItem VerticalContentAlignment="Center">
+                                    <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                                        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                                            <Button Height="50" Width="50" FontSize="24" Background="Transparent" 
+                                                        FontFamily="Segoe MDL2 Assets" Content="&#xE8FB;" />
+                                            <TextBlock FontSize="10" Text="Take Now" TextAlignment="Center" />
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                                            <Button Height="50" Width="50" FontSize="24" Background="Transparent" 
+                                                        FontFamily="Segoe MDL2 Assets" Content="&#xE101;" />
+                                            <TextBlock FontSize="10" Text="Skip" TextAlignment="Center" />
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                                            <Button Height="50" Width="50" FontSize="24" Background="Transparent"
+                                                        FontFamily="Segoe MDL2 Assets" Content="&#xE104;" />
+                                            <TextBlock FontSize="10" Text="Edit" TextAlignment="Center" />
+                                        </StackPanel>
+                                        <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                                            <Button Height="50" Width="50" FontSize="24"  Background="Transparent" 
+                                                        FontFamily="Segoe MDL2 Assets" Content="&#xE107;" />
+                                            <TextBlock FontSize="10" Text="Delete" TextAlignment="Center" />
+                                        </StackPanel>
                                     </StackPanel>
                                 </FlipViewItem>
                             </FlipView>
