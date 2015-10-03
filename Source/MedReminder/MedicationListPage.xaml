@@ -54,11 +54,11 @@
                     <TextBlock Text="{Binding ProfileName}" FontSize="24" VerticalAlignment="Center" />
                     <TextBlock Text="'s Medictation" FontSize="24" VerticalAlignment="Center" />
                 </StackPanel>
-                <ListView x:Name="MedicationList" SelectionMode="None" ItemsSource="{Binding Medications}" 
-                          Grid.Row="1" Grid.Column="1">
+                <ListView x:Name="MedicationList" SelectionMode="Single" CanReorderItems="True" ItemsSource="{Binding Medications}" 
+                          Grid.Row="1" Grid.Column="1" SelectionChanged="MedicationList_SelectionChanged">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <FlipView MaxHeight="100" Background="Transparent">
+                            <FlipView x:Name="MedicationFlipView" MaxHeight="100" Background="Transparent">
                                 <FlipViewItem  VerticalContentAlignment="Center">
                                     <StackPanel HorizontalAlignment="Stretch" Margin="0,5,0,5">
                                         <StackPanel Orientation="Horizontal">
