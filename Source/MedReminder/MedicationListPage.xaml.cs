@@ -54,7 +54,7 @@ namespace MedReminder
                 if (index == MedicationList.SelectedIndex)
                     continue;
 
-                var flipView = findElementInItemsControlItemAtIndex(MedicationList, index, "MedicationFlipView") as FlipView;
+                var flipView = findElementInVisualTree(MedicationList, index, "MedicationFlipView") as FlipView;
                 if (flipView == null)
                     continue;
 
@@ -62,25 +62,15 @@ namespace MedReminder
             }
         }
 
-        DependencyObject findElementInItemsControlItemAtIndex(ItemsControl itemsControl,
-                                                                int itemOfIndexToFind,
-                                                                string nameOfControlToFind)
+        DependencyObject findElementInVisualTree(ItemsControl itemsControl, int childIndex, string controlName)
         {
-            if (itemOfIndexToFind >= itemsControl.Items.Count) return null;
+            if (childIndex >= itemsControl.Items.Count)
+                return null;
 
-            DependencyObject depObj = null;
-            object o = itemsControl.Items[itemOfIndexToFind];
-            if (o != null)
-            {
-                var item = itemsControl.ContainerFromItem(o);
-                if (item != null)
-                {
-                    //GridViewItem it = item as GridViewItem;
-                    //var i = it.FindName(nameOfControlToFind);
-                    depObj = getVisualTreeChild(item, nameOfControlToFind);
-                    return depObj;
-                }
-            }
+            var item = itemsControl.ContainerFromIndex(childIndex);
+            if (item != null)
+                return getVisualTreeChild(item, controlName);
+
             return null;
         }
 
@@ -113,5 +103,6 @@ namespace MedReminder
             }
             return dependencyObject;
         }
+
     }
 }
