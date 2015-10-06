@@ -58,7 +58,7 @@
                           Grid.Row="1" Grid.Column="1" SelectionChanged="MedicationList_SelectionChanged">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <FlipView x:Name="MedicationFlipView" MaxHeight="100" Background="Transparent">
+                            <FlipView x:Name="MedicationFlipView" MaxHeight="100" Background="Transparent" SelectionChanged="MedicationFlipView_SelectionChanged">
                                 <FlipViewItem  VerticalContentAlignment="Center">
                                     <StackPanel HorizontalAlignment="Stretch" Margin="0,5,0,5">
                                         <StackPanel Orientation="Horizontal">

@@ -62,6 +62,26 @@ namespace MedReminder
             }
         }
 
+        private void MedicationFlipView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var flipView = sender as FlipView;
+            if (flipView == null)
+                return;
+
+            if (flipView.SelectedIndex != 1)
+                return;
+
+            var item = flipView.DataContext;
+            if (item == null)
+                return;
+
+            var listViewItem = MedicationList.ContainerFromItem(item) as ListViewItem;
+            if (listViewItem == null)
+                return;
+
+            listViewItem.IsSelected = true;
+        }
+
         DependencyObject findElementInVisualTree(ItemsControl itemsControl, int childIndex, string controlName)
         {
             if (childIndex >= itemsControl.Items.Count)
