@@ -15,7 +15,7 @@ MedReminder was developed by [Harry Steinhilber, Jr.](mailto:harry@randomcodepat
 
 ### LICENSE ###
 
-MedReminder is licensed under the [MS-PL](./LICENSE.md).
+MedReminder is licensed under the [MS-PL](./License.md).
 
 ### Copyright © 2015 ###
 
